@@ -1,3 +1,4 @@
+// grid products
 const app = document.querySelector("#root");
 
 const container = document.createElement("div");
@@ -27,8 +28,6 @@ let productsGrid = async () => {
       const img = document.createElement("img");
       img.src = products.image;
   
-      imgHeader.appendChild(img);
-  
       const name = document.createElement("p");
       name.textContent = products.name;
       name.setAttribute("class", "name");
@@ -38,19 +37,22 @@ let productsGrid = async () => {
       descriptionInfo.setAttribute("class", "description");
       
       const oldPriceInfo = document.createElement("p");
-      oldPriceInfo.textContent = products.oldPrice;
+      oldPriceInfo.textContent = `De: R$ ${products.oldPrice}`;
       oldPriceInfo.setAttribute("class", "old-price");
   
       const price = document.createElement("p");
-      price.textContent = products.price;
+      price.textContent = `Por: R$ ${products.price}`;
       price.setAttribute("class", "price");
+
+      const groupValues = document.createElement("div");
+      groupValues.setAttribute("class", "groupValues");
   
       const installmentsCount = document.createElement("p");
-      installmentsCount.textContent = products.installments.count;
+      installmentsCount.textContent = `ou ${products.installments.count}`;
       installmentsCount.setAttribute("class", "ins-count");
   
       const installmentsValue = document.createElement("p");
-      installmentsValue.textContent = products.installments.value;
+      installmentsValue.textContent = `de R$ ${products.installments.value}`;
       installmentsValue.setAttribute("class", "ins-value");
   
       const button = document.createElement("button");
@@ -58,13 +60,15 @@ let productsGrid = async () => {
       button.textContent = "Comprar";
   
       container.appendChild(card);
+      imgHeader.appendChild(img);
       card.appendChild(imgHeader);
       card.appendChild(name);
       card.appendChild(descriptionInfo);
       card.appendChild(oldPriceInfo);
       card.appendChild(price);
-      card.appendChild(installmentsCount);
-      card.appendChild(installmentsValue);
+      card.appendChild(groupValues);
+      groupValues.appendChild(installmentsCount);
+      groupValues.appendChild(installmentsValue);
       card.appendChild(button);
       });
     })
@@ -74,14 +78,22 @@ let productsGrid = async () => {
       app.appendChild(err);
     });
 };
-
 productsGrid();
 
+// loading 8 products per page
 let loadMore = () => {
   document.querySelector(".btn-mais").onclick = () => {
     page ++;
     productsGrid();
   };
 };
-
 loadMore();
+
+// menu mobile
+let menuMob = () => {
+    document.querySelector("#show-menu").onclick = () => {
+    let element = document.querySelector(".links-mob");
+    element.classList.toggle("links-mob-show");
+  };
+};
+menuMob();
