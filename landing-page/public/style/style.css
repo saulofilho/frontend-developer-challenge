@@ -1,3 +1,5 @@
+@import "./main.css";
+
 #root {
   max-width: 1200px;
   margin: 0 auto;
@@ -69,7 +71,6 @@ p {
 .img-header {
   width: 200px;
   height: 150px;
-  background-color: red;
   overflow: hidden;
   border: 1px solid #707070;
 }
@@ -79,6 +80,59 @@ p {
 .btn-buy {
   width: 100%;
   height: 30px;
+  background: none;
+  border: 1px solid #707070;
+  color: #888888;
+  font-size: 16px;
+  padding: inherit;
+}
+.maisProdutos {
+  text-align: center;
+}
+.newsletter {
+  margin-top: 164px;
+  margin-bottom: 142.36px;
+  text-align: center;
+  color: #888888;
+}
+.newsletter p:nth-child(1) {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.newsletter p:nth-child(2) {
+  font-size: 14px;
+}
+form {
+  display: grid;
+  grid-template-areas: 
+  "inp-left inp-right"
+  "btn-center btn-center"
+  ;
+}
+.inp-left {
+  grid-area: inp-left;
+}
+.inp-right {
+  grid-area: inp-right;
+}
+.btn-center {
+  grid-area: btn-center;
+}
+
+label {
+  color: #888888;
+  font-size: 12px;
+  text-align: left;
+}
+input {
+  border: 1px solid #707070 !important;
+  width: 340px !important;
+  height: 30px !important;
+}
+.btn-news, .btn-mais {
+  margin-top: 50px;
+  width: 260px;
+  height: 39px;
   background: none;
   border: 1px solid #707070;
   color: #888888;
@@ -96,44 +150,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.newsletter {
-  margin-top: 164px;
-  margin-bottom: 142.36px;
-  text-align: center;
-  color: #888888;
-}
-.newsletter p:nth-child(1) {
-  font-size: 18px;
-  font-weight: bolder;
-}
-.newsletter p:nth-child(2) {
-  font-size: 14px;
-}
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
-}
-label {
-  color: #888888;
-  font-size: 12px;
-  text-align: left;
-}
-input {
-  border: 1px solid #707070 !important;
-  width: 340px !important;
-  height: 30px !important;
-}
-.btn-news {
-  margin-top: 50px;
-  width: 260px;
-  height: 39px;
-  background: none;
-  border: 1px solid #707070;
-  color: #888888;
-  font-size: 16px;
-  padding: inherit;
 }
 .foot-text {
   text-align: center;

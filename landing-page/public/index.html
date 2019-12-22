@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Linx Impulse Store</title>
-    <link rel="stylesheet" href="../src/style/style.css" type="text/css" />
-    <link rel="stylesheet" href="../src/style/main.css" type="text/css" />
-    <link rel="shortcut icon" href="../src/assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="./style/style.css" type="text/css" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/png" />
 </head>
 
 <body>
@@ -58,7 +57,16 @@
                 Sua seleção especial
             </p>
         </div>
-        <section id="root"></section>
+        <section id="root">
+            <!--
+                Products from API will be displayed here.
+            -->
+        </section>
+        <div class="maisProdutos">
+            <button class="btn-mais">
+                Ainda mais produtos aqui!
+            </button>
+        </div>
         <div class="newsletter small-container">
             <p>
                 Compartilhe a novidade
@@ -67,19 +75,21 @@
                 Quer que seus amigos também ganhem a lista personalizada deles?
                 Preencha agora!
             </p>
-            <form>
-                <div>
-                    <label for="name">Nome do seu amigo:</label>
-                    <input type="text" />
+            <form action="">
+                <div class="inp-left">
+                    <label for="nome">Nome do seu amigo:</label>
+                    <input type="text" title="Preencha o campo Nome" required name="nome" />
                 </div>
-                <div>
-                    <label for="name">Nome do seu amigo:</label>
-                    <input type="text" />
+                <div class="inp-right">
+                    <label for="email">E-mail:</label>
+                    <input type="text" title="Preencha o campo E-mail"required name="email"  />
+                </div>
+                <div class="btn-center">
+                    <button class="btn-news">
+                        Enviar Agora
+                    </button>
                 </div>
             </form>
-            <button class="btn-news">
-                Enviar Agora
-            </button>
         </div>
     </main>
     <footer>
@@ -95,8 +105,8 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="./bundle.js" type="text/javascript"></script> -->
-    <script src="../src/script/main.js" type="text/javascript"></script>
+    <script src="./bundle.js" type="text/javascript"></script>
+    <!-- <script src="../src/script/main.js" type="text/javascript"></script> -->
 </body>
 
 </html>

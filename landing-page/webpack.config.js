@@ -6,7 +6,11 @@ module.exports = {
     },
     devServer: {
         contentBase: __dirname + "/public",
-        watchContentBase: true
+        watchContentBase: true,
+        watchOptions: {
+            poll: true
+          },
+        port: 9000
     },
     module: {
         rules: [
