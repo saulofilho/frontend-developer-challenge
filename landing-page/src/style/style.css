@@ -1,0 +1,155 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+p {
+  font-family: Helvetica;
+}
+.menu {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 319px;
+  background: #707070 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+}
+.menu-text {
+  text-align: center;
+  color: #fff;
+}
+.menu-text p {
+  text-align: center;
+  color: #fff;
+}
+.menu-nav {
+  position: relative;
+  top: 30%;
+}
+.menu-nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+.menu-nav li {
+  display: inline;
+  margin-right: 40px;
+}
+.btn-style {
+  width: 160px;
+  height: 40px;
+  font-size: 14px;
+  background: #FFFFFF;
+  border: 1px solid #fff;
+  color: #888888;
+}
+.main-title {
+  text-align: center;
+}
+.main-title p {
+  margin-top: 48.67px;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: #888888;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 2rem;
+}
+.card {
+  margin: 1rem;
+  overflow: hidden;
+  transition: all 0.1s linear;
+}
+.card:hover {
+  transform: translate3D(0, -10px, 0);
+  opacity: 0.7;
+}
+.img-header {
+  width: 200px;
+  height: 150px;
+  background-color: red;
+  overflow: hidden;
+  border: 1px solid #707070;
+}
+.img-header img {
+  width: 100%;
+}
+.btn-buy {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: 1px solid #707070;
+  color: #888888;
+  font-size: 16px;
+  padding: inherit;
+}
+.foot-style {
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: 201px;
+  background: #707070;
+  border: 1px solid #707070;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter {
+  margin-top: 164px;
+  margin-bottom: 142.36px;
+  text-align: center;
+  color: #888888;
+}
+.newsletter p:nth-child(1) {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.newsletter p:nth-child(2) {
+  font-size: 14px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+label {
+  color: #888888;
+  font-size: 12px;
+  text-align: left;
+}
+input {
+  border: 1px solid #707070 !important;
+  width: 340px !important;
+  height: 30px !important;
+}
+.btn-news {
+  margin-top: 50px;
+  width: 260px;
+  height: 39px;
+  background: none;
+  border: 1px solid #707070;
+  color: #888888;
+  font-size: 16px;
+  padding: inherit;
+}
+.foot-text {
+  text-align: center;
+  font-family: Helvetica Neue;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  opacity: 1;
+  font-size: 12px;
+}
+@media screen and (min-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
